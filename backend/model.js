@@ -6,20 +6,20 @@ const mongoose=require('mongoose');
 const taskSchema = new mongoose.Schema({
     title: {
       type: String,
-      required: true,  // Title is required
-      trim: true       // Trims whitespace from the title
+      required: true,  
+      trim: true      
     },
     content: {
       type: String,
-      required: true    // Content is required
+      required: true  
     },
     status: {
       type: String,
-      enum: ["task", "inProgress", "done"], // Only allowed values for status
+      enum: ["task","inProgress","done"], 
       default: "task"
     }
   }, {
-    timestamps: true  // Automatically adds createdAt and updatedAt fields
+    timestamps: true 
   });
 
 
